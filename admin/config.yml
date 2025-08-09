@@ -1,7 +1,7 @@
 backend:
   name: github
-  repo: "lupapelie/lupapelie.github.io"  # Seu repositório no GitHub
-  branch: main  # O branch principal do seu repositório, geralmente é 'main' ou 'master'
+  repo: "lupapelie/lupapelie.github.io"  # Este é o seu repositório no GitHub
+  branch: main
 
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
