@@ -1,17 +1,18 @@
 backend:
-  name: github  # Certifique-se de que esteja em minúsculas
-  repo: "lupapelie/lupapelie.github.io"  # Este é o nome correto do seu repositório
-  branch: main  # O nome do seu branch principal, normalmente 'main', mas pode ser 'master'
+  name: github
+  repo: "lupapelie/lupapelie.github.io"  # O repositório correto no GitHub
+  branch: main  # Ou 'principal', se for o seu branch principal
 
-media_folder: "static/images/uploads"  # Pasta onde as imagens serão salvas
-public_folder: "/images/uploads"  # Onde as imagens podem ser acessadas publicamente
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
 
 collections:
   - name: "postagens"
     label: "Postagens"
-    folder: "content/postagens"  # Onde os posts serão armazenados
+    folder: "content/postagens"  # Caminho para a pasta de postagens
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"  # Padrão para o slug das postagens
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    identifier_field: "title"  # Adicionando o campo identificador como "title"
     fields:
-      - { label: "Título", name: "titulo", widget: "string" }  # Campo para o título
-      - { label: "Corpo", name: "corpo", widget: "markdown" }  # Campo para o corpo do post
+      - { label: "Título", name: "titulo", widget: "string" }
+      - { label: "Corpo", name: "corpo", widget: "markdown" }
