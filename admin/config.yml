@@ -1,6 +1,6 @@
 backend:
-  name: github  # Corrigido para 'github' em minúsculas
-  repo: "lupapelie/lupapelie.github.io"  # Nome correto do seu repositório no GitHub
+  name: github
+  repo: "lupapelie/lupapelie.github.io"  # Nome correto do repositório no GitHub
   branch: main  # Ou 'principal', dependendo do seu branch principal
 
 media_folder: "static/images/uploads"
@@ -9,10 +9,10 @@ public_folder: "/images/uploads"
 collections:
   - name: "postagens"
     label: "Postagens"
-    folder: "content/postagens"  # Caminho correto da pasta de postagens
+    folder: "content/postagens"  # Caminho para a pasta de postagens
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"  # Gerar o URL baseado no título
-    identifier_field: "title"  # Adicionando 'title' como identificador único
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"  # Gerar o URL com base no título
+    identifier_field: "titulo"  # Aqui estamos configurando 'titulo' como o identificador
     fields:
-      - { label: "Título", name: "titulo", widget: "string" }  # 'titulo' é o campo do título
+      - { label: "Título", name: "titulo", widget: "string" }  # O campo 'titulo' serve como identificador
       - { label: "Corpo", name: "corpo", widget: "markdown" }  # 'corpo' é o conteúdo do post
