@@ -10883,7 +10883,7 @@ textarea.form-control-lg {
 }
 
 .search-bar button:hover {
-  color: #F09579;
+  color: #8C4036;
 }
 
 .logo-link {
@@ -10896,4 +10896,91 @@ textarea.form-control-lg {
 .logo-link img {
   max-height: 140px;
   object-fit: contain;
+}
+
+/* Estilo para a parte superior do rodapé (Siga-nos, Institucional, Fale com a Lú) */
+.footer-top {
+    display: flex;
+    justify-content: center; /* Centraliza as seções na largura do site */
+    align-items: flex-start;  /* Alinha as seções no centro verticalmente */
+    padding: 60px 200x;       /* Ajuste o padding para ter um espaçamento mais compacto */
+    background-color: #FFFFFF; /* Cor de fundo branco */
+    flex-wrap: wrap;          /* Garante que as seções se ajustem em telas menores */
+    gap: 20px;                /* Espaçamento entre as seções */    
+    position: relative;       /* Move as seções sem afetar a faixa azul */
+    top: 0px;               /* Ajuste o valor para mover as seções para cima */
+    max-width: 1200px;        /* Limita a largura máxima do rodapé */
+    margin-left: 355px;        /* Desloca as seções para a direita */
+}
+
+/* Estilo para as seções dentro da parte superior */
+.footer-top .social,
+.footer-top .institucional,
+.footer-top .contato {
+    width: 20%;               /* Ajusta a largura das seções */
+    text-align: left;
+    margin: 0 20px;           /* Reduz o espaçamento horizontal entre as seções */
+}
+
+/* Estilo para os títulos nas seções */
+.footer-top .social p,
+.footer-top .institucional p,
+.footer-top .contato p {
+    margin: 5px 0;
+    font-size: 18px;          /* Aumenta o tamanho da fonte dos títulos */
+    font-weight: bold;        /* Coloca os títulos em negrito */
+}
+
+/* Estilo para os links (sobre nós, telefone, e-mail, envio, etc.) */
+.footer-top .social a,
+.footer-top .institucional a,
+.footer-top .contato a {
+    font-size: 14px;          /* Reduz o tamanho da fonte dos links */
+    color: #8C4036;           /* Cor dos links */
+    text-decoration: none;    /* Remove o sublinhado */
+}
+
+/* Estilo para o ícone do Instagram */
+footer i {
+    font-size: 30px;          /* Tamanho do ícone */
+    margin-right: 10px;       /* Espaçamento ao lado do ícone */
+    color: #8C4036;           /* Cor inicial do ícone */
+}
+
+/* Estilo para o efeito hover no ícone do Instagram */
+footer i:hover {
+    color: #F08080;           /* Cor coral quando o mouse passar sobre o ícone */
+}
+
+/* Estilo para os links */
+.footer-top a {
+    color: #8C4036;           /* Cor dos links */
+    text-decoration: none;    /* Remove o sublinhado */
+}
+
+.footer-top a:hover {
+    color: #F08080;           /* Cor coral quando o mouse passar sobre o link */
+}
+
+/* Estilo para a faixa azul inferior */
+.footer-bottom {
+    background-color: #C1F3F5; /* Cor de fundo azul claro */
+    text-align: center;        /* Centraliza o texto horizontalmente */
+    padding: 5px 0;            /* Reduz a altura da faixa azul */
+    font-size: 13px;           /* Ajuste do tamanho do texto */
+    display: flex;             /* Usa flexbox */
+    justify-content: center;   /* Centraliza o conteúdo horizontalmente */
+    align-items: center;       /* Centraliza verticalmente */
+    height: 30px;              /* Define a altura da faixa */
+    width: 100%;               /* Garante que a faixa ocupe toda a largura */
+    position: sticky;           /* Fixa a faixa no rodapé */
+    bottom: 0;                  /* Garante que a faixa fique no fundo da página */
+    left: 0;                   /* Garante que a faixa ocupe toda a largura da tela */
+    z-index: 1;                 /* Garante que a faixa azul fique acima de outros conteúdos */
+    margin-top: 100px;           /* Aumenta o espaçamento entre as seções e a faixa azul */
+}
+
+.footer-bottom p {
+    margin: 0; /* Remove a margem do texto */
+    line-height: 30px; /* Garante que o texto fique centralizado verticalmente */
 }

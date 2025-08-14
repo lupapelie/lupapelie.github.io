@@ -4,9 +4,6 @@
     <!-- Metadados principais -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
-    <!-- Adicionar no <head> -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/netlify-cms@2.0.0/dist/netlify-cms.min.css">
     
     <!-- Título e descrição -->
     <title>Lú Papeliê | Papelaria Personalizada</title>
@@ -174,6 +171,31 @@
   color: #F09579 !important;
 }
 
+ .swiper-button-next,
+        .swiper-button-prev {
+            background-color: transparent;
+            border: 2px solid #9d8b79; /* Cor da borda */
+            border-radius: 50%; /* Borda arredondada */
+            width: 40px; /* Tamanho das setas */
+            height: 40px; /* Tamanho das setas */
+            color: #9d8b79; /* Cor das setas */
+            z-index: 10;
+            position: absolute;
+            bottom: 10px; /* Posiciona as setas no fundo */
+            transform: translateY(0); /* Remove o ajuste do centro vertical */
+        }
+
+        .swiper-button-next {
+            right: 10px;
+        }
+
+        .swiper-button-prev {
+            left: 10px;
+        }
+
+        .swiper-pagination {
+            display: none; /* Esconde a barra de navegação */
+        }
 
 </style>
 
@@ -181,6 +203,9 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
     </head>
 
     <body>
@@ -235,17 +260,8 @@
                 </div>
             </div>
         </nav>
-        <!-- Cabeçalho -->
-        <header class="py-5" style="background-color:#FFFFFF;">
-            <div class="container px-4 px-lg-5 my-5">
-                <div class="text-center text-white">
-                    <h1 class="display-4 fw-bolder">Shop in style</h1>
-                    <p class="lead fw-normal text-white-50 mb-0">With this shop hompeage template</p>
-                </div>
-            </div>
-        </header>
-
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <!-- Carousel Banner -->
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="margin-top: -40px;">
   <!-- Indicadores de navegação (bolinhas) -->
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -256,7 +272,7 @@
   <!-- Imagens do carousel -->
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="URL-DA-IMAGEM-1.jpg" class="d-block w-100" alt="Descrição da imagem 1">
+      <img src="https://github.com/lupapelie/lupapelie.github.io/blob/main/02.%20Banner.png?raw=true" class="d-block w-100" alt="Descrição da imagem 1">
     </div>
     <div class="carousel-item">
       <img src="URL-DA-IMAGEM-2.jpg" class="d-block w-100" alt="Descrição da imagem 2">
@@ -276,6 +292,7 @@
     <span class="visually-hidden">Próximo</span>
   </button>
 </div>
+
         <!-- Section-->
         <section class="py-5">
             <div class="container px-4 px-lg-5 mt-5">
@@ -479,10 +496,47 @@
                 </div>
             </div>
         </section>
-        <!-- Footer-->
-        <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p></div>
-        </footer>
+
+     <!-- Rodapé -->
+<footer>
+    <!-- Seção Lado a Lado (Siga-nos, Institucional, Fale com a Lú) -->
+    <div class="footer-top">
+        <div class="social">
+            <p>Siga-nos</p>
+            <a href="https://www.instagram.com/lupapelie_" style="color: #8C4036; text-decoration: none;">
+                <i class="fab fa-instagram" style="font-size: 25px;" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div class="institucional">
+            <p>Institucional</p>
+            <p><a href="#sobre-nos">Sobre Nós</a></p>
+            <p><a href="#politicas">Políticas da Papel</a></p>
+            <p><a href="#faq">Perguntas Frequentes</a></p>
+            <p><a href="#envio">Envio</a></p>
+        </div>
+
+        <div class="contato">
+            <p>Fale com a Lú</p>
+            <p>
+                <a href="https://wa.me/5561993385623" target="_blank">
+                    <i class="fab fa-whatsapp" style="font-size: 20px;"></i> +55 61 99338-5623
+                </a>
+            </p>
+            <p>
+                <a href="mailto:luupapelie@gmail.com">
+                    <i class="fas fa-envelope" style="font-size: 20px;"></i> luupapelie@gmail.com
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Faixa Azul (Copyright) -->
+    <div class="footer-bottom">
+        <p>Copyright © Lú Papeliê - 36.319.662/0001-76 - 2025. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
@@ -526,9 +580,6 @@
       lastScrollTop = st;
   }
 </script>
-
-<!-- Adicionar antes de </body> -->
-<script src="https://cdn.jsdelivr.net/npm/netlify-cms@2.9.0/dist/netlify-cms.min.js"></script>
 
 
     </body>
