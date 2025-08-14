@@ -1,0 +1,17 @@
+backend:
+  name: github
+  repo: "lupapelie/lupapelie.github.io"  # Nome correto do repositório no GitHub
+  branch: main  # Ou 'principal', se o seu branch principal for 'principal'
+
+media_folder: "static/images/uploads"  # Onde as imagens enviadas serão armazenadas
+public_folder: "/images/uploads"  # Caminho público para as imagens
+
+collections:
+  - name: "pages"
+    label: "Páginas"
+    folder: "/"  # Editando diretamente o index.html
+    create: false  # Não criar novas páginas, apenas editar
+    slug: "index.html"  # O CMS vai editar diretamente o arquivo index.html
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Conteúdo", name: "body", widget: "markdown" }
