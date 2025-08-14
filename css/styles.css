@@ -10,6 +10,36 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
+ /* Definindo a fonte Champagne Limousines */
+@font-face {
+    font-family: 'ChampagneLimousines';
+    src: url('/fonts/ChampagneLimousines.woff2') format('woff2'),
+         url('/fonts/ChampagneLimousines.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;  /* Isso garante que a fonte de fallback seja usada enquanto a fonte principal carrega */
+}
+
+/* Fonte em negrito */
+@font-face {
+    font-family: 'ChampagneLimousines';
+    src: url('/fonts/ChampagneLimousines-Bold.woff2') format('woff2'),
+         url('/fonts/ChampagneLimousines-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;  /* Isso garante que a fonte de fallback seja usada enquanto a fonte principal carrega */
+}
+
+/* Usar a fonte customizada para todo o site */
+body {
+    font-family: 'ChampagneLimousines', sans-serif !important;
+    font-weight: normal !important;
+    font-style: normal !important;
+    margin: 0;
+    padding: 0;
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -10825,9 +10855,10 @@ textarea.form-control-lg {
   }
 }
 
+/* Logo (parte de cima) */
 .logo-header {
   position: fixed;
-  top: 10px;
+  top: 10px; 
   left: 0;
   width: 100%;
   height: 200px;
@@ -10896,7 +10927,34 @@ textarea.form-control-lg {
 .logo-link img {
   max-height: 140px;
   object-fit: contain;
+
 }
+
+/* Linha divisória */
+.divider {
+  border: 0; /* Remove a borda padrão */
+  border-top: 1px solid #8C4036; /* Cor e espessura da linha */
+  margin: 20px 0; /* Espaçamento acima e abaixo da linha */
+}
+
+/* Adicionando espaço entre a seção sobre nós e o rodapé */
+#sobre-nos {
+  padding-top: 300px; /* Aumente esse valor conforme necessário */
+}
+
+/* Estilo para a linha de separação (hr) */
+hr.divider {
+  border: none;
+  border-top: 2px solid #8C4036;  /* Altere a cor e espessura conforme necessário */
+  margin-top: 20px;  /* Espaço entre a linha e o conteúdo acima */
+  margin-bottom: 20px;  /* Espaço entre a linha e o conteúdo abaixo */
+}
+
+/* Estilo para o rodapé */
+footer {
+  margin-top: 30px;  /* Ajuste para adicionar mais espaço acima do rodapé */
+}
+
 
 /* Estilo para a parte superior do rodapé (Siga-nos, Institucional, Fale com a Lú) */
 .footer-top {
@@ -11025,4 +11083,32 @@ body {
     .footer-bottom p {
         font-size: 12px; /* Ajusta o tamanho da fonte do texto no rodapé */
     }
+}
+
+#sobre-nos {
+  font-family: 'ChampagneLimousines', sans-serif;  /* Usando a fonte definida no site */
+  font-size: 16px;  /* Tamanho do texto normal */
+  font-weight: bold;  /* Tira o negrito do texto */
+  line-height: 1.5;  /* Espaçamento entre as linhas */
+  margin: 40px 0;  /* Espaçamento acima e abaixo da seção */
+  text-align: justify;  /* Justifica o texto */
+}
+
+#sobre-nos h3 {
+  font-size: 18px;  /* Tamanho do título */
+  font-weight: bold;  /* Deixa os títulos em negrito */
+  margin-top: 20px;  /* Espaçamento acima dos títulos */
+}
+
+#sobre-nos ul {
+  list-style-type: none;  /* Remove os marcadores padrão */
+  padding-left: 20px;  /* Ajuste o espaço entre os itens e a borda */
+}
+
+#sobre-nos li {
+  margin-bottom: 10px;  /* Espaçamento entre os itens */
+}
+
+#sobre-nos p {
+  font-size: 16px;  /* Tamanho do texto nos parágrafos */
 }

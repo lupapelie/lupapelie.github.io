@@ -1,1 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <!-- Metadados principais -->
+    <meta charset="utf-8" />
 
+    <!-- Adicionando a meta tag viewport para dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Título e descrição -->
+    <title>Lú Papeliê | Papelaria Personalizada</title>
+    <meta name="description" content="Agendas, cadernos, planners e canecas personalizadas com amor e criatividade. Deixe sua rotina mais linda com a Lú Papeliê!">
+    <meta name="author" content="Luanna - Lú Papeliê" />
+
+    <!-- Favicon padrão para navegadores -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/x-icon" href="favicon_io/favicon.ico">
+
+    <!-- Favicon em maior resolução para telas Retina -->
+    <link rel="icon" type="image/png" sizes="48x48" href="favicon_io/favicon-48x48.png">
+
+    <!-- Ícone para dispositivos Apple -->
+    <link rel="apple-touch-icon" href="favicon_io/apple-touch-icon.png">
+
+    <!-- Ícones para Android -->
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon_io/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="favicon_io/android-chrome-512x512.png">
+
+    <!-- Manifesto PWA (Progressive Web App) -->
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+
+    <!-- Fontes -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Champagne+Limousines:wght@400;700&display=swap">
+
+    <!-- Preload da imagem principal -->
+<link rel="preload" as="image"
+  href="https://i.imgur.com/T7FO5xU_1024.png"
+  imagesrcset="
+    https://i.imgur.com/T7FO5xU_1024.png 480w,
+    https://i.imgur.com/T7FO5xU_1024.png 1024w,
+    https://i.imgur.com/T7FO5xU_1024.png 1920w"
+  imagesizes="(max-width: 600px) 480px, (max-width: 1200px) 1024px, 1920px">
+
+    <!-- Open Graph (para redes sociais) -->
+    <meta property="og:title" content="Lú Papeliê | Papelaria Personalizada" />
+    <meta property="og:description" content="Encadernação artesanal e presentes criativos sob medida." />
+    <meta property="og:image" content="https://i.imgur.com/T7FO5xU.png" />
+    <meta property="og:url" content="https://lupapelie.github.io/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Lú Papeliê" />
+
+    <!-- Twitter Card (opcional) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Lú Papeliê | Papelaria com Amor" />
+    <meta name="twitter:description" content="Personalizados em papelaria, encadernação e sublimação." />
+    <meta name="twitter:image" content="https://URL-DA-IMAGEM-DESTAQUE.jpg" />
+
+    <!-- Preconnect para acelerar carregamento de fontes ou imagens -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- CSS do Bootstrap ou seu CSS customizado -->
+    <link rel="stylesheet" href="style.css" />
+
+        <style>
+/* Barra superior alinhada à esquerda, fixada no topo */
+.topbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 25px; /* tamanho da faixa rosa claro */
+  background-color: #FFE4EB; /* cor da marca */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* alinhada à esquerda */
+  padding: 0 20px; /* distância lado esquerdo */
+  z-index: 1100;
+  font-size: 14px; /* tamanho da fonte */
+  border-bottom: 1px solid #FFE4EB; /* cor da borda inferior (se houver) */
+  transition: transform 0.3s ease;
+}
+
+.topbar-nav a {
+  margin-right: 20px; /* distância de um botão para o outro */
+  text-decoration: none;
+  color: #8C4036;
+  transition: color 0.3s;
+}
+
+.topbar-nav a:hover {
+  color: #F09579; /* coral no hover, quando posiciona o mouse sobre o link */
+}
+
+  /* Logo (parte de cima) */
+  .logo-header {
+  position: fixed;
+  top: 10px; /* logo abaixo da barra topbar */
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: height 0.3s ease, top 0.3s ease;
+  z-index: 1050;
+  }
+
+  .logo-header img {
+    height: 140px;
+    transition: height 0.3s ease;
+    max-width: 100%;
+  object-fit: contain;
+  }
+
+  .logo-header.shrink img {
+    height: 100px;
+  }
+
+  /* Barra de navegação abaixo da logo */
+  nav.navbar {
+  position: fixed;
+  width: 100%;
+  background-color: #FFE4EB;
+  z-index: 1060;
+  transition: top 0.3s ease;
+  top: 200px; /* altura total da logo + topbar */
+}
+
+  /* Quando a logo diminuir, a nav sobe */
+  .logo-header.shrink + nav.navbar {
+  top: 155px; /* 25px topbar + 130px logo reduzida */
+ }
+
+  /* Espaço no body para não sobrepor conteúdo */
+  body {
+  padding-top: 295px; /* 25 + 200 + 70 */
+
+}
+
+/* Links da barra de navegação */
+.navbar .nav-link,
+.navbar .dropdown-item {
+  color: #8C4036 !important;
+  transition: color 0.3s;
+}
+
+/* Hover dos links da barra de navegação */
+.navbar .nav-link:hover,
+.navbar .dropdown-item:hover {
+  color: #F09579 !important;
+}
+
+ .swiper-button-next,
+        .swiper-button-prev {
+            background-color: transparent;
+            border: 2px solid #9d8b79; /* Cor da borda */
+            border-radius: 50%; /* Borda arredondada */
+            width: 40px; /* Tamanho das setas */
+            height: 40px; /* Tamanho das setas */
+            color: #9d8b79; /* Cor das setas */
+            z-index: 10;
+            position: absolute;
+            bottom: 10px; /* Posiciona as setas no fundo */
+            transform: translateY(0); /* Remove o ajuste do centro vertical */
+        }
+
+        .swiper-button-next {
+            right: 10px;
+        }
+
+        .swiper-button-prev {
+            left: 10px;
+        }
+
+        .swiper-pagination {
+            display: none; /* Esconde a barra de navegação */
+        }
+
+</style>
+
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    </head>
+
+    <body>
+       <!-- Barra de navegação superior -->
+  <div class="topbar">
+    <!-- Links da barra superior -->
+    <nav class="topbar-nav">
+   <a href="sobre.html">Sobre Nós</a> <!-- Link para a página sobre -->
+   <a href="politicas.html">Políticas da Lú</a>
+   <a href="faq.html">Perguntas Frequentes</a>
+   <a href="envio.html">Envio</a>
+</nav>
+  </div>
+
+        <!-- Logo centralizada -->
+            <div class="logo-header" id="logoHeader">
+                <!-- Aqui vai a logo -->
+  <div class="search-container">
+
+        <!-- formulário da busca -->
+    <form class="search-bar" action="#" method="get">
+      <input type="text" name="q" placeholder="o que você procura?" />
+      <button type="submit" aria-label="Buscar">
+        <i class="bi bi-search"></i>
+      </button>
+    </form>
+  </div>
+
+  <a href="index.html" class="logo-link">
+    <img src="01. Logotipo.png" alt="Logo Lú Papeliê" />
+  </a>
+
+  <div class="right-space"></div> <!-- espaço para equilibrar -->
+</div>
+      
+            <!-- Navegação-->
+        <nav class="navbar navbar-expand-lg" style="background-color: #FFE4EB;">
+            <div class="container px-4 px-lg-5">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Início</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Maternidade</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#todos-produtos">Todos os produtos</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item" href="#caderneta-gestante">Caderneta de Gestante</a></li>
+                                <li><a class="dropdown-item" href="#caderneta-vacina">Caderneta de Vacina</a></li>
+                                <li><a class="dropdown-item" href="#livro-bebe">Livro do Bebê</a></li>
+                                <li><a class="dropdown-item" href="#outros-produtos">Outros Produtos</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+  <!-- Sobre nós -->
+<section id="sobre-nos">
+  <h2>Sobre nós</h2>
+  <p>Bem-vindo(a) à <strong>Lú Papeliê</strong>! ✨ Somos apaixonados por transformar ideias em produtos personalizados que encantam e fazem a diferença no seu dia a dia. 💖</p>
+
+  <p>A <strong>Lú Papeliê</strong> nasceu em <strong>2020</strong> com o propósito de levar <strong>criatividade</strong> e <strong>qualidade</strong> para todos. Criamos itens que inspiram e encantam, sempre com muito carinho e atenção aos detalhes.</p>
+
+  <h3>Nossa Missão</h3>
+  <p>Criar produtos personalizados e de alta qualidade que tragam mais <strong>organização</strong>, <strong>criatividade</strong> e <strong>estilo</strong> para o dia a dia dos nossos clientes. Trabalhamos com paixão e atenção aos detalhes para entregar sempre o melhor. 💪</p>
+
+  <h3>Nossa Visão</h3>
+  <p>Ser reconhecida como a marca <strong>líder</strong> em personalização de papelaria, oferecendo uma experiência única para cada cliente e criando produtos que transformam o cotidiano em algo mais especial. 🌟</p>
+
+  <h3>Nossos Valores</h3>
+  <ul>
+    <li><strong>💡 Criatividade</strong>: Buscamos constantemente inovação em nossos designs.</li>
+    <li><strong>🔝 Qualidade</strong>: Cada produto é feito com os melhores materiais e acabamento.</li>
+    <li><strong>🤝 Compromisso</strong>: Estamos sempre prontos para atender com dedicação e responsabilidade.</li>
+    <li><strong>🌱 Sustentabilidade</strong>: Valorizamos práticas que respeitam o meio ambiente em nossos processos de produção.</li>
+  </ul>
+
+  <p>Nosso objetivo vai além de vender, queremos ser parte da sua jornada empreendedora, oferecendo <strong>suporte</strong>, <strong>inspiração</strong> e as <strong>ferramentas certas</strong> para o seu sucesso! 🚀</p>
+
+  <p>Ficou com dúvidas? Entre em contato pelo e-mail: <strong>luupapelie@gmail.com</strong> ou nos siga no instagram <strong>@lupapelie_</strong> para acompanhar nossas novidades! 🌸</p>
+</section>
+
+        <hr class="divider">
+
+     <!-- Rodapé -->
+<footer>
+    <!-- Seção Lado a Lado (Siga-nos, Institucional, Fale com a Lú) -->
+    <div class="footer-top">
+        <div class="social">
+            <p>Siga-nos</p>
+            <a href="https://www.instagram.com/lupapelie_" style="color: #8C4036; text-decoration: none;">
+                <i class="fab fa-instagram" style="font-size: 25px;" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div class="institucional">
+            <p>Institucional</p>
+            <p><a href="#sobre-nos">Sobre Nós</a></p>
+            <p><a href="#politicas">Políticas da Lú</a></p>
+            <p><a href="#faq">Perguntas Frequentes</a></p>
+            <p><a href="#envio">Envio</a></p>
+        </div>
+
+        <div class="contato">
+            <p>Fale com a Lú</p>
+            <p>
+                <a href="https://wa.me/5561993385623" target="_blank">
+                    <i class="fab fa-whatsapp" style="font-size: 20px;"></i> +55 61 99338-5623
+                </a>
+            </p>
+            <p>
+                <a href="mailto:luupapelie@gmail.com">
+                    <i class="fas fa-envelope" style="font-size: 20px;"></i> luupapelie@gmail.com
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Faixa Azul (Copyright) -->
+    <div class="footer-bottom">
+        <p>Copyright © Lú Papeliê - 36.319.662/0001-76 - 2025. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+      <script>
+  var didScroll;
+  var lastScrollTop = 0;
+  var delta = 30;
+  var logoHeader = document.querySelector('.logo-header');
+  var topbar = document.querySelector('.topbar');
+  var navbarHeight = logoHeader.offsetHeight;
+  var topbarHeight = topbar.offsetHeight;
+
+  window.addEventListener("scroll", function(){
+      didScroll = true;
+  });
+
+  setInterval(function() {
+      if (didScroll) {
+          hasScrolled();
+          didScroll = false;
+      }
+  }, 250);
+
+  function hasScrolled() {
+      var st = window.pageYOffset;
+
+      if(Math.abs(lastScrollTop - st) <= delta)
+          return;
+
+      if (st > lastScrollTop && st > navbarHeight) {
+          logoHeader.classList.add('shrink');
+          logoHeader.style.top = (-topbarHeight) + 'px'; // sobe ocupando espaço da topbar
+          topbar.style.transform = 'translateY(-100%)'; // esconde a topbar
+      } else {
+          logoHeader.classList.remove('shrink');
+          logoHeader.style.top = '0px'; // volta ao topo normal
+          topbar.style.transform = 'translateY(0)'; // mostra a topbar
+      }
+
+      lastScrollTop = st;
+  }
+</script>
+
+
+    </body>
+</html>

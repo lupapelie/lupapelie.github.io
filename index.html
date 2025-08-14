@@ -3,7 +3,6 @@
   <head>
     <!-- Metadados principais -->
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <!-- Adicionando a meta tag viewport para dispositivos móveis -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,9 +13,7 @@
     <meta name="author" content="Luanna - Lú Papeliê" />
 
     <!-- Favicon padrão para navegadores -->
-    <link rel="icon" type="image/png" sizes="48x48" href="favicon_io/favicon-48x48.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
     <link rel="icon" type="image/x-icon" href="favicon_io/favicon.ico">
 
     <!-- Favicon em maior resolução para telas Retina -->
@@ -31,6 +28,9 @@
 
     <!-- Manifesto PWA (Progressive Web App) -->
     <link rel="manifest" href="favicon_io/site.webmanifest">
+
+    <!-- Fontes -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Champagne+Limousines:wght@400;700&display=swap">
 
     <!-- Preload da imagem principal -->
 <link rel="preload" as="image"
@@ -63,29 +63,6 @@
     <link rel="stylesheet" href="style.css" />
 
         <style>
-
-    /* fonte utilizada no site */
-      @font-face {
-  font-family: 'ChampagneLimousines';
-  src: url('/fonts/ChampagneLimousines.woff2') format('woff2'),
-       url('/fonts/ChampagneLimousines.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'ChampagneLimousines';
-  src: url('/fonts/ChampagneLimousines-Bold.woff2') format('woff2'),
-       url('/fonts/ChampagneLimousines-Bold.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-}
-
-   body {
-  font-family: 'ChampagneLimousines', sans-serif !important;
-  font-weight: bold !important;
-  padding-top: 295px;
-}
 /* Barra superior alinhada à esquerda, fixada no topo */
 .topbar {
   position: fixed;
@@ -214,18 +191,21 @@
     <body>
        <!-- Barra de navegação superior -->
   <div class="topbar">
+    <!-- Links da barra superior -->
     <nav class="topbar-nav">
-      <a href="#sobre.html">Sobre Nós</a>
-      <a href="#politicas.html">Políticas da Lú</a>
-      <a href="#faq.html">Perguntas Frequentes</a>
-      <a href="#envio.html">Envio</a>
-    </nav>
+   <a href="sobre.html">Sobre Nós</a> <!-- Link para a página sobre -->
+   <a href="politicas.html">Políticas da Lú</a>
+   <a href="faq.html">Perguntas Frequentes</a>
+   <a href="envio.html">Envio</a>
+</nav>
   </div>
 
         <!-- Logo centralizada -->
             <div class="logo-header" id="logoHeader">
+                <!-- Aqui vai a logo -->
   <div class="search-container">
-    <!-- formulário da busca -->
+
+        <!-- formulário da busca -->
     <form class="search-bar" action="#" method="get">
       <input type="text" name="q" placeholder="o que você procura?" />
       <button type="submit" aria-label="Buscar">
@@ -500,6 +480,8 @@
             </div>
         </section>
 
+        <hr class="divider">
+
      <!-- Rodapé -->
 <footer>
     <!-- Seção Lado a Lado (Siga-nos, Institucional, Fale com a Lú) -->
@@ -514,7 +496,7 @@
         <div class="institucional">
             <p>Institucional</p>
             <p><a href="#sobre-nos">Sobre Nós</a></p>
-            <p><a href="#politicas">Políticas da Papel</a></p>
+            <p><a href="#politicas">Políticas da Lú</a></p>
             <p><a href="#faq">Perguntas Frequentes</a></p>
             <p><a href="#envio">Envio</a></p>
         </div>
