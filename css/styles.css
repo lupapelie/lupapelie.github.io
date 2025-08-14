@@ -10984,3 +10984,45 @@ footer i:hover {
     margin: 0; /* Remove a margem do texto */
     line-height: 30px; /* Garante que o texto fique centralizado verticalmente */
 }
+
+/* Estilos para desktop e telas grandes */
+body {
+    font-family: 'ChampagneLimousines', sans-serif !important;
+    font-weight: bold !important;
+}
+
+/* Media Query para telas com largura até 768px (celulares e tablets) */
+@media screen and (max-width: 768px) {
+    /* Ajustar a navegação para ser vertical (em coluna) */
+    nav {
+        display: block; /* Alinha os links da navegação em uma coluna */
+        text-align: center; /* Centraliza os links */
+    }
+
+    nav a {
+        display: block;
+        padding: 10px;
+        font-size: 18px; /* Ajuste o tamanho da fonte para o mobile */
+    }
+
+    /* Ajustar o tamanho da logo */
+    .logo-header img {
+        height: 100px; /* Reduz o tamanho da logo para telas menores */
+    }
+
+    /* Ajustar o layout do rodapé (footer) */
+    .footer-top {
+        flex-direction: column; /* Organiza as seções do rodapé em coluna */
+        align-items: center;
+    }
+
+    /* Ajustes para garantir que o conteúdo principal não fique muito apertado */
+    .container {
+        padding: 10px;
+    }
+
+    /* Ajustar o texto do rodapé */
+    .footer-bottom p {
+        font-size: 12px; /* Ajusta o tamanho da fonte do texto no rodapé */
+    }
+}
